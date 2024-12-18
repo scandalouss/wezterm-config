@@ -8,6 +8,8 @@ if wezterm.conf_builder then
     conf=wezterm.config_builder()
 end
 
+wezterm.log_info("Version "..wezterm.version)
+
 --generic settings
 conf.check_for_updates=true
 conf.color_scheme="greenred"
@@ -69,6 +71,10 @@ conf.keys={
     {key="d",mods="SUPER|CTRL",action=wezterm.action.AdjustPaneSize{"Down", 5}},
     {key="f",mods="SUPER|CTRL",action=wezterm.action.AdjustPaneSize{"Right", 5}},
     {key="s",mods="SUPER|CTRL",action=wezterm.action.AdjustPaneSize{"Left", 8}},
+
+    --scrolling up and down one line at a time
+    {key="UpArrow",mods="SHIFT",action=wezterm.action.ScrollByLine(-1)},
+    {key="DownArrow",mods="SHIFT",action=wezterm.action.ScrollByLine(1)},
 }
 
 smartsplits.apply_to_config(conf, {

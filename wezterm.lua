@@ -12,7 +12,7 @@ wezterm.log_info("Version "..wezterm.version)
 
 --generic settings
 conf.check_for_updates=true
-conf.color_scheme="greenred"
+conf.color_scheme="jellyfish"
 conf.front_end="OpenGL"
 conf.default_cwd=wezterm.home_dir
 conf.default_workspace="home"

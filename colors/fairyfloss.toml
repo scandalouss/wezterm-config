@@ -1,0 +1,28 @@
+#jellyfish wezterm theme by david
+[colors]
+foreground="#fcfcfc"
+background="#171420"
+cursor_fg="#171420"
+cursor_bg="#fcfcfc"
+
+ansi=[
+    "#42395d",
+    "#a8757b",
+    "#ff857f",
+    "#e6c000",
+    "#ae81ff",
+    "#716799",
+    "#c2ffdf",
+    "#f8f8f2",
+]
+
+brights=[
+    "#75507b",
+    "#ffb8d1",
+    "#f1568e",
+    "#d5a425",
+    "#c5a3ff",
+    "#8077a8",
+    "#c2ffff",
+    "#f8f8f0",
+]

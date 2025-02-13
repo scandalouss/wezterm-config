@@ -12,12 +12,12 @@ wezterm.log_info("Version "..wezterm.version)
 
 --generic settings
 conf.check_for_updates=true
-conf.color_scheme="jellyfish"
+conf.color_scheme="fairyfloss"
 conf.front_end="OpenGL"
 conf.default_cwd=wezterm.home_dir
 conf.default_workspace="home"
 conf.enable_kitty_graphics=true
-conf.window_background_opacity=0.90
+conf.window_background_opacity=0.92
 conf.text_background_opacity=1.00
 conf.use_fancy_tab_bar=false
 conf.hide_tab_bar_if_only_one_tab=true

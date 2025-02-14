@@ -75,6 +75,24 @@ conf.keys={
     --scrolling up and down one line at a time
     {key="UpArrow",mods="SHIFT",action=wezterm.action.ScrollByLine(-1)},
     {key="DownArrow",mods="SHIFT",action=wezterm.action.ScrollByLine(1)},
+
+    -- Adding the example from https://wezterm.org/config/lua/keyassignment/QuickSelectArgs.html
+    -- Allows Quick-select regex's https links and opens them with the browser instead of clipboard
+    {
+        key = 'H',
+        mods = 'CTRL|SHIFT',
+        action = wezterm.action.QuickSelectArgs {
+            label = 'open url',
+            patterns = {
+                'https?://\\S+',
+            },
+            action = wezterm.action_callback(function(window, pane)
+                local url = window:get_selection_text_for_pane(pane)
+                wezterm.log_info('opening: ' .. url)
+                wezterm.open_with(url)
+            end),
+        },
+    },
 }
 
 smartsplits.apply_to_config(conf, {

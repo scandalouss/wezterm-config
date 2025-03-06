@@ -1,0 +1,29 @@
+#colorscheme based on gentoo colors
+# https://wiki.gentoo.org/wiki/Project:Artwork/Colors
+[colors]
+foreground="#dddaec"
+background="#000000"
+cursor_fg="#000000"
+cursor_bg="#dddaec"
+
+ansi=[
+    "#282a2e",
+    "#e42b3c",
+    "#6e56af",
+    "#73d216",
+    "#485ab1",
+    "#b956bd",
+    "#366dcd",
+    "#7b7680",
+]
+
+brights=[
+    "#373b41",
+    "#d94f5c",
+    "#a385f6",
+    "#a6e46a",
+    "#7f90e1",
+    "#b994bb",
+    "#6798ef",
+    "#e1e1e1",
+]

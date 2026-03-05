@@ -12,12 +12,12 @@ wezterm.log_info("Version "..wezterm.version)
 
 --generic settings
 conf.check_for_updates=true
-conf.color_scheme="gentoo"
+conf.color_scheme="gentoo5"
 conf.front_end="OpenGL"
 conf.default_cwd=wezterm.home_dir
 conf.default_workspace="home"
 conf.enable_kitty_graphics=true
-conf.window_background_opacity=0.90
+conf.window_background_opacity=0.91
 conf.text_background_opacity=1.00
 conf.use_fancy_tab_bar=false
 conf.hide_tab_bar_if_only_one_tab=true
@@ -25,7 +25,7 @@ conf.default_cursor_style="BlinkingBlock"
 conf.window_close_confirmation="NeverPrompt"
 
 --font stuff
-conf.font=wezterm.font("ubuntumono")
+conf.font=wezterm.font("UbuntuMono Nerd Font")
 conf.font_size=11.0
 conf.freetype_load_target="Light"
 conf.freetype_load_flags="NO_HINTING"
@@ -64,13 +64,17 @@ conf.keys={
     {key="RightArrow",mods="CTRL",action=wezterm.action.ActivatePaneDirection("Right")},
     {key="UpArrow",mods="CTRL",action=wezterm.action.ActivatePaneDirection("Up")},
     {key="DownArrow",mods="CTRL",action=wezterm.action.ActivatePaneDirection("Down")},
-    {key="l",mods="SUPER|CTRL",action=wezterm.action.RotatePanes"Clockwise"},
-    {key="k",mods="SUPER|CTRL",action=wezterm.action.RotatePanes"CounterClockwise"},
+    {key="l",mods="ALT|CTRL",action=wezterm.action.RotatePanes"Clockwise"},
+    {key="k",mods="ALT|CTRL",action=wezterm.action.RotatePanes"CounterClockwise"},
     {key="q",mods="SUPER|CTRL",action=wezterm.action.CloseCurrentPane{confirm=true}},
-    {key="e",mods="SUPER|CTRL",action=wezterm.action.AdjustPaneSize{"Up", 5}},
-    {key="d",mods="SUPER|CTRL",action=wezterm.action.AdjustPaneSize{"Down", 5}},
-    {key="f",mods="SUPER|CTRL",action=wezterm.action.AdjustPaneSize{"Right", 5}},
-    {key="s",mods="SUPER|CTRL",action=wezterm.action.AdjustPaneSize{"Left", 8}},
+    {key="e",mods="ALT|CTRL",action=wezterm.action.AdjustPaneSize{"Up", 5}},
+    {key="d",mods="ALT|CTRL",action=wezterm.action.AdjustPaneSize{"Down", 5}},
+    {key="f",mods="ALT|CTRL",action=wezterm.action.AdjustPaneSize{"Right", 5}},
+    {key="s",mods="ALT|CTRL",action=wezterm.action.AdjustPaneSize{"Left", 5}},
+    {key="e",mods="ALT|CTRL|SHIFT",action=wezterm.action.AdjustPaneSize{"Up", 1}},
+    {key="d",mods="ALT|CTRL|SHIFT",action=wezterm.action.AdjustPaneSize{"Down", 1}},
+    {key="f",mods="ALT|CTRL|SHIFT",action=wezterm.action.AdjustPaneSize{"Right", 1}},
+    {key="s",mods="ALT|CTRL|SHIFT",action=wezterm.action.AdjustPaneSize{"Left", 1}},
 
     --scrolling up and down one line at a time
     {key="UpArrow",mods="SHIFT",action=wezterm.action.ScrollByLine(-1)},

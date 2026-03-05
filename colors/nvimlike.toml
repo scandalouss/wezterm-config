@@ -1,0 +1,28 @@
+#sleepyhollow wezterm
+[colors]
+foreground="#eef1f8"
+background="#07080d"
+cursor_fg="#07080d"
+cursor_bg="#eef1f8"
+
+ansi=[
+    "#14161b",
+    "#f16f61",
+    "#5fe876",
+    "#f0c165",
+    "#68bdf2",
+    "#f294f2",
+    "#52ebeb",
+    "#E0E2EA",
+]
+
+brights=[
+    "#2c2e33",
+    "#ffc0b9",
+    "#b4f6c0",
+    "#fce095",
+    "#a6dbff",
+    "#ffcaff",
+    "#8cf8f7",
+    "#eef1f8",
+]

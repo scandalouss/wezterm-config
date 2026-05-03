@@ -10,16 +10,16 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 let s:shortmess_save = &shortmess
 set shortmess+=aoO
-badd +16 ~/.config/wezterm/wezterm.lua
+badd +30 ~/.config/wezterm/wezterm.lua
 badd +29 colors/gentoo3.toml
-badd +0 colors/gentoo5.toml
+badd +13 colors/gentoo5.toml
 argglobal
 %argdel
-edit colors/gentoo5.toml
+edit ~/.config/wezterm/wezterm.lua
 argglobal
-balt ~/.config/wezterm/wezterm.lua
+balt colors/gentoo3.toml
 setlocal foldmethod=manual
-setlocal foldexpr=0
+setlocal foldexpr=v:lua.vim.treesitter.foldexpr()
 setlocal foldmarker={{{,}}}
 setlocal foldignore=#
 setlocal foldlevel=99
@@ -27,16 +27,24 @@ setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldenable
 silent! normal! zE
-sil! 8,17fold
-sil! 19,28fold
-sil! 2,28fold
+sil! 7,9fold
+sil! 37,42fold
+sil! 45,53fold
+sil! 90,92fold
+sil! 93,97fold
+sil! 88,98fold
+sil! 85,99fold
+sil! 55,100fold
+sil! 103,106fold
+sil! 107,110fold
+sil! 102,111fold
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 33) / 67)
+let s:l = 31 - ((1 * winheight(0) + 29) / 58)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 013|
+keepjumps 31
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

@@ -23,6 +23,7 @@ conf.use_fancy_tab_bar=false
 conf.hide_tab_bar_if_only_one_tab=true
 conf.default_cursor_style="BlinkingBlock"
 conf.window_close_confirmation="NeverPrompt"
+conf.audible_bell = "SystemBeep"
 
 --font stuff
 conf.font=wezterm.font("UbuntuMono Nerd Font")
